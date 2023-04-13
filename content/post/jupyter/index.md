@@ -1,77 +1,42 @@
 ---
-title: Display Jupyter Notebooks with Academic
-subtitle: Learn how to blog in Academic using Jupyter notebooks
-summary: Learn how to blog in Academic using Jupyter notebooks
+title: Markdown
+subtitle: 
+summary: Кратко про Markdown
 authors:
   - admin
 tags: []
 categories: []
 projects: []
-date: '2019-02-05T00:00:00Z'
-lastMod: '2019-09-05T00:00:00Z'
+date: '2023-04-05T00:00:00Z'
+lastMod: '2023-04-06T00:00:00Z'
 image:
   caption: ''
   focal_point: ''
 ---
 
-```python
-from IPython.core.display import Image
-Image('https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png')
-```
+## Данный пост лишь кратко описывает что такое язык легковесной разметки Markdown
 
-![png](./index_1_0.png)
+Markdown, или маркдаун, — это язык разметки для текстовых документов. Он позволяет создавать тексты без использования Word и других редакторов. Разметку можно прочитать и воспроизвести в любой системе или браузере.Маркдаун создал писатель и блогер Джон Грубер вместе с веб-активистом Аароном Шварцем. Они хотели придумать максимально простой и удобный язык разметки, с помощью которого текст можно перевести в красиво оформленный вид. При этом текст обязан оставаться читаемым даже без приведения к «красивому» виду. Таким и оказался Markdown. Его создали в 2004 году, но наибольшую популярность язык получил сейчас. Его поддерживают разнообразные платформы для блогов, сервисы создания заметок, CMS и даже мессенджеры. Поэтому маркдаун полезно знать всем, кто имеет дело с вебом, от разработчиков до блогеров.
 
-```python
-print("Welcome to Academic!")
-```
+## Как пользоваться языком разметки
 
-    Welcome to Academic!
+Человек пишет текст в любом редакторе и добавляет в него специальные комбинации стандартных символов. Это разметка, она показывает, где текст должен быть жирным, где — заголовком, а в каком месте нужен список. С помощью символов можно разметить заголовки, выделения текста и даже сложные конструкции вроде таблиц. Специальные преобразователи формируют на основе разметки готовый документ. Это похоже на использование HTML, но маркдаун проще, текст в нем более читаемый. Преобразователи или изначально есть в текстовом редакторе, например в приложении для заметок, или скачиваются отдельно.
 
-## Install Python and JupyterLab
+## Кто пользуется маркдауном
 
-[Install Anaconda](https://www.anaconda.com/distribution/#download-section) which includes Python 3 and JupyterLab.
 
-Alternatively, install JupyterLab with `pip3 install jupyterlab`.
+Пользователи интернета, которые общаются в мессенджерах и пишут заметки в сервисах, поддерживающих разметку.
+Разработчики, которые пишут с помощью маркдауна документацию для проектов, — им нужен простой и надежный инструмент.
+Контент-менеджеры при наполнении сайтов, которые поддерживают маркдаун. Разметка может использоваться и на веб-страницах.
+Блогеры, пишущие лонгриды, когда оформляют материалы для статей. Многие платформы для написания текстов поддерживают маркдаун, например Notion.
+Писатели и копирайтеры, которым нужен простой инструмент для оформления текста — разметка, читаемая с любого устройства.
+Энтузиасты, которые пользуются разметкой в личных целях: пишут заметки и списки дел, ведут дневники или составляют карточки для запоминания.
 
-## Create or upload a Jupyter notebook
+## Для чего нужен маркдаун
 
-Run the following commands in your Terminal, substituting `<MY-WEBSITE-FOLDER>` and `<SHORT-POST-TITLE>` with the file path to your Academic website folder and a short title for your blog post (use hyphens instead of spaces), respectively:
+Быстрое форматирование статьи для перевода в PDF или чтобы она просто выглядела красиво без лишних усилий.
+Верстка текстового документа для размещения на сайте, но без применения HTML.
+Написание документации для кода.
+Составление заметок в личном цифровом блокноте.
+Написание красивых сообщений в мессенджерах.
 
-```bash
-mkdir -p <MY-WEBSITE-FOLDER>/content/post/<SHORT-POST-TITLE>/
-cd <MY-WEBSITE-FOLDER>/content/post/<SHORT-POST-TITLE>/
-jupyter lab index.ipynb
-```
-
-The `jupyter` command above will launch the JupyterLab editor, allowing us to add Academic metadata and write the content.
-
-## Edit your post metadata
-
-The first cell of your Jupter notebook will contain your post metadata ([front matter](https://sourcethemes.com/academic/docs/front-matter/)).
-
-In Jupter, choose _Markdown_ as the type of the first cell and wrap your Academic metadata in three dashes, indicating that it is YAML front matter:
-
-```
----
-title: My post's title
-date: 2019-09-01
-
-# Put any other Academic metadata here...
----
-```
-
-Edit the metadata of your post, using the [documentation](https://sourcethemes.com/academic/docs/managing-content) as a guide to the available options.
-
-To set a [featured image](https://sourcethemes.com/academic/docs/managing-content/#featured-image), place an image named `featured` into your post's folder.
-
-For other tips, such as using math, see the guide on [writing content with Academic](https://wowchemy.com/docs/content/writing-markdown-latex/).
-
-## Convert notebook to Markdown
-
-```bash
-jupyter nbconvert index.ipynb --to markdown --NbConvertApp.output_files_dir=.
-```
-
-## Example
-
-This post was created with Jupyter. The orginal files can be found at https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter
